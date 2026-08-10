@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Cozy Catz Cattery | Cat Boarding in Jersey</title>
+<meta name="description" content="Cozy Catz Cattery in Jersey. Comfortable cat boarding with individual accommodation, large runs and caring personal service.">
+
+<style>
+:root {
+--cream: #faf6ef;
+--warm-white: #fffdf9;
+--brown: #59483d;
+--dark: #302821;
+--terracotta: #b8795f;
+--terracotta-dark: #9d604a;
+--sage: #89947d;
+--light-sage: #e8ece3;
+--border: #e7ded3;
+--shadow: 0 12px 35px rgba(48, 40, 33, 0.08);
+}
+
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+color: var(--dark);
+background: var(--cream);
+line-height: 1.65;
+}
+
+h1, h2, h3 {
+font-family: Georgia, "Times New Roman", serif;
+font-weight: 500;
+line-height: 1.15;
+}
+
+a {
+color: inherit;
+}
+
+/* ---------------- HEADER ---------------- */
+
+header {
+position: sticky;
+top: 0;
+z-index: 100;
+background: rgba(250, 246, 239, 0.94);
+backdrop-filter: blur(12px);
+border-bottom: 1px solid rgba(89, 72, 61, 0.08);
+}
+
+.nav {
+max-width: 1120px;
+margin: auto;
+padding: 18px 24px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+
+.logo {
+text-decoration: none;
+font-family: Georgia, serif;
+font-size: 1.5rem;
+color: var(--brown);
+}
+
+.logo span {
+display: block;
+font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+font-size: 0.65rem;
+letter-spacing: 2px;
+text-transform: uppercase;
+margin-top: 2px;
+color: var(--sage);
+}
+
+nav ul {
+list-style: none;
+display: flex;
+gap: 28px;
+}
+
+nav a {
+text-decoration: none;
+font-size: 0.9rem;
+color: var(--brown);
+}
+
+nav a:hover {
+color: var(--terracotta);
+}
+
+/* ---------------- HERO ---------------- */
+
+.hero {
+min-height: 650px;
+display: flex;
+align-items: center;
+background:
+linear-gradient(
+90deg,
+rgba(48, 40, 33, 0.82) 0%,
+rgba(48, 40, 33, 0.52) 48%,
+rgba(48, 40, 33, 0.18) 100%
+),
+url("cat-hero.jpg") center/cover;
+color: white;
+}
+
+.hero-inner {
+width: 100%;
+max-width: 1120px;
+margin: auto;
+padding: 80px 24px;
+}
+
+.hero-content {
+max-width: 650px;
+}
+
+.eyebrow {
+text-transform: uppercase;
+letter-spacing: 3px;
+font-size: 0.72rem;
+margin-bottom: 20px;
+opacity: 0.85;
+}
+
+.hero h1 {
+font-size: clamp(3.3rem, 7vw, 6rem);
+margin-bottom: 25px;
+}
+
+.hero p {
+font-size: 1.15rem;
+max-width: 560px;
+opacity: 0.95;
+}
+
+.hero-buttons {
+display: flex;
+gap: 12px;
+flex-wrap: wrap;
+margin-top: 32px;
+}
+
+.button {
+display: inline-block;
+padding: 13px 22px;
+border-radius: 100px;
+text-decoration: none;
+font-weight: 600;
+font-size: 0.9rem;
+transition: 0.2s ease;
+}
+
+.button-primary {
+background: white;
+color: var(--brown);
+}
+
+.button-primary:hover {
+transform: translateY(-2px);
+}
+
+.button-outline {
+border: 1px solid rgba(255,255,255,0.7);
+color: white;
+}
+
+.button-outline:hover {
+background: white;
+color: var(--brown);
+}
+
+/* ---------------- GENERAL ---------------- */
+
+section {
+padding: 90px 24px;
+}
+
+.container {
+max-width: 1120px;
+margin: auto;
+}
+
+.section-heading {
+max-width: 650px;
+margin-bottom: 45px;
+}
+
+.section-heading .eyebrow {
+color: var(--terracotta);
+}
+
+.section-heading h2 {
+font-size: clamp(2.2rem, 4vw, 3.4rem);
+margin-bottom: 18px;
+}
+
+.section-heading p {
+color: #6c625b;
+}
+
+/* ---------------- PRICES ---------------- */
+
+.prices {
+background: var(--warm-white);
+}
+
+.price-grid {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 18px;
+}
+
+.price-card {
+background: var(--cream);
+padding: 30px 24px;
+border: 1px solid var(--border);
+border-radius: 18px;
+transition: 0.2s ease;
+}
+
+.price-card:hover {
+transform: translateY(-4px);
+box-shadow: var(--shadow);
+}
+
+.price-card h3 {
+font-size: 1.45rem;
+margin-bottom: 14px;
+}
+
+.price {
+font-size: 2rem;
+font-weight: 600;
+color: var(--terracotta-dark);
+}
+
+.price small {
+font-size: 0.75rem;
+font-weight: 400;
+color: #766c64;
+}
+
+.price-note {
+margin-top: 30px;
+color: #6c625b;
+font-size: 0.9rem;
+}
+
+/* ---------------- INFORMATION ---------------- */
+
+.info-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 24px;
+}
+
+.info-card {
+background: var(--warm-white);
+padding: 35px;
+border-radius: 20px;
+border: 1px solid var(--border);
+}
+
+.info-card h3 {
+font-size: 1.7rem;
+margin-bottom: 20px;
+}
+
+.info-card p {
+color: #645b54;
+}
+
+.hours-list {
+list-style: none;
+}
+
+.hours-list li {
+display: flex;
+justify-content: space-between;
+gap: 20px;
+padding: 13px 0;
+border-bottom: 1px solid var(--border);
+}
+
+.hours-list li:last-child {
+border-bottom: 0;
+}
+
+.closed {
+color: var(--terracotta-dark);
+font-weight: 600;
+}
+
+/* ---------------- ARRIVALS ---------------- */
+
+.arrivals {
+background: var(--light-sage);
+}
+
+.arrival-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 20px;
+}
+
+.arrival-card {
+background: rgba(255,255,255,0.65);
+border-radius: 18px;
+padding: 32px;
+}
+
+.arrival-card h3 {
+font-size: 1.8rem;
+margin-bottom: 12px;
+}
+
+.time {
+font-size: 1.7rem;
+font-weight: 600;
+color: var(--brown);
+}
+
+.arrangement {
+margin-top: 25px;
+background: rgba(255,255,255,0.65);
+padding: 22px 25px;
+border-radius: 14px;
+font-size: 0.95rem;
+}
+
+/* ---------------- DOCUMENTS ---------------- */
+
+.documents {
+background: var(--warm-white);
+}
+
+.document-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 20px;
+}
+
+.document {
+border: 1px solid var(--border);
+border-radius: 18px;
+padding: 30px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 20px;
+background: var(--cream);
+}
+
+.document h3 {
+font-size: 1.35rem;
+margin-bottom: 5px;
+}
+
+.document p {
+font-size: 0.85rem;
+color: #746a62;
+}
+
+.document-button {
+flex-shrink: 0;
+background: var(--brown);
+color: white;
+padding: 11px 18px;
+border-radius: 100px;
+text-decoration: none;
+font-size: 0.85rem;
+font-weight: 600;
+}
+
+.document-button:hover {
+background: var(--terracotta-dark);
+}
+
+.important-note {
+margin-top: 25px;
+padding: 20px;
+background: #f3eee5;
+border-left: 3px solid var(--terracotta);
+font-size: 0.9rem;
+}
+
+/* ---------------- DIRECTIONS ---------------- */
+
+.directions {
+background: var(--cream);
+}
+
+.directions-box {
+background: var(--warm-white);
+border-radius: 24px;
+padding: 45px;
+border: 1px solid var(--border);
+box-shadow: var(--shadow);
+}
+
+.directions-box h2 {
+font-size: 2.7rem;
+margin-bottom: 22px;
+}
+
+.directions-box p {
+color: #625951;
+font-size: 1.05rem;
+max-width: 850px;
+}
+
+.direction-highlight {
+margin-top: 25px;
+padding: 22px;
+border-radius: 14px;
+background: var(--light-sage);
+color: var(--brown);
+font-weight: 600;
+}
+
+/* ---------------- CONTACT ---------------- */
+
+.contact {
+background: var(--brown);
+color: white;
+}
+
+.contact-inner {
+max-width: 850px;
+margin: auto;
+text-align: center;
+}
+
+.contact h2 {
+font-size: clamp(2.5rem, 5vw, 4rem);
+margin-bottom: 18px;
+}
+
+.contact-intro {
+opacity: 0.85;
+margin-bottom: 35px;
+}
+
+.contact-details {
+display: flex;
+justify-content: center;
+gap: 15px;
+flex-wrap: wrap;
+margin-bottom: 35px;
+}
+
+.contact-link {
+display: inline-block;
+padding: 14px 22px;
+border: 1px solid rgba(255,255,255,0.25);
+border-radius: 100px;
+text-decoration: none;
+color: white;
+transition: 0.2s ease;
+}
+
+.contact-link:hover {
+background: white;
+color: var(--brown);
+}
+
+.contact-rule {
+max-width: 620px;
+margin: auto;
+padding: 20px;
+border-radius: 14px;
+background: rgba(255,255,255,0.08);
+font-size: 0.9rem;
+opacity: 0.9;
+}
+
+/* ---------------- FOOTER ---------------- */
+
+footer {
+background: #40342c;
+color: rgba(255,255,255,0.65);
+text-align: center;
+padding: 25px;
+font-size: 0.8rem;
+}
+
+/* ---------------- MOBILE ---------------- */
+
+@media (max-width: 850px) {
+
+nav ul {
+display: none;
+}
+
+.price-grid {
+grid-template-columns: 1fr 1fr;
+}
+
+.info-grid,
+.arrival-grid,
+.document-grid {
+grid-template-columns: 1fr;
+}
+
+.hero {
+min-height: 600px;
+}
+}
+
+@media (max-width: 520px) {
+
+section {
+padding: 65px 18px;
+}
+
+.hero-inner {
+padding: 70px 18px;
+}
+
+.hero h1 {
+font-size: 3.3rem;
+}
+
+.price-grid {
+grid-template-columns: 1fr;
+}
+
+.price-card {
+padding: 25px;
+}
+
+.info-card,
+.directions-box {
+padding: 27px;
+}
+
+.document {
+align-items: flex-start;
+flex-direction: column;
+}
+
+.document-button {
+width: 100%;
+text-align: center;
+}
+
+.contact-details {
+flex-direction: column;
+}
+
+.contact-link {
+width: 100%;
+}
+}
+</style>
+</head>
+
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+<div class="nav">
+
+<a href="#" class="logo">
+Cozy Catz
+<span>Cattery · Jersey</span>
+</a>
+
+<nav>
+<ul>
+<li><a href="#prices">Prices</a></li>
+<li><a href="#arrivals">Arrivals</a></li>
+<li><a href="#documents">Forms</a></li>
+<li><a href="#directions">Directions</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+</div>
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-inner">
+
+<div class="hero-content">
+
+<div class="eyebrow">
+A cosy home away from home
+</div>
+
+<h1>
+Welcome to<br>
+Cozy Catz.
+</h1>
+
+<p>
+Comfortable, caring cat boarding in Jersey,
+giving your cat a safe and cosy place to stay
+while you're away.
+</p>
+
+<div class="hero-buttons">
+<a href="#prices" class="button button-primary">
+View prices
+</a>
+
+<a href="#contact" class="button button-outline">
+Get in touch
+</a>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PRICES -->
+
+<section class="prices" id="prices">
+
+<div class="container">
+
+<div class="section-heading">
+
+<div class="eyebrow">
+Daily rates
+</div>
+
+<h2>
+Simple, straightforward pricing.
+</h2>
+
+<p>
+All prices below are charged per day.
+</p>
+
+</div>
+
+
+<div class="price-grid">
+
+<div class="price-card">
+<h3>One cat</h3>
+<div class="price">
+£13.50
+<small>/ day</small>
+</div>
+</div>
+
+
+<div class="price-card">
+<h3>Two cats</h3>
+<div class="price">
+£23.50
+<small>/ day</small>
+</div>
+</div>
+
+
+<div class="price-card">
+<h3>Three cats</h3>
+<div class="price">
+£33.00
+<small>/ day</small>
+</div>
+</div>
+
+
+<div class="price-card">
+<h3>Chalet + large run</h3>
+<div class="price">
+£25 / £35
+<small>/ day</small>
+</div>
+</div>
+
+</div>
+
+
+<p class="price-note">
+All of the above are daily charges.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- OPENING INFORMATION -->
+
+<section>
+
+<div class="container">
+
+<div class="section-heading">
+
+<div class="eyebrow">
+Planning your stay
+</div>
+
+<h2>
+When to drop off & collect.
+</h2>
+
+<p>
+Please choose one of the regular arrival or collection
+times below. Other times can be arranged in advance.
+</p>
+
+</div>
+
+
+<div class="info-grid">
+
+<div class="info-card">
+
+<h3>Opening days</h3>
+
+<ul class="hours-list">
+
+<li>
+<span>Monday – Saturday</span>
+<strong>Open</strong>
+</li>
+
+<li>
+<span>Sunday</span>
+<strong class="closed">Closed</strong>
+</li>
+
+<li>
+<span>Bank holidays</span>
+<strong class="closed">Closed</strong>
+</li>
+
+</ul>
+
+</div>
+
+
+<div class="info-card">
+
+<h3>Please note</h3>
+
+<p>
+Cozy Catz Cattery is closed on Sundays and bank holidays.
+Please bear this in mind when planning your cat's arrival
+and collection.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- DROP OFF / COLLECTION -->
+
+<section class="arrivals" id="arrivals">
+
+<div class="container">
+
+<div class="section-heading">
+
+<div class="eyebrow">
+Arrival & collection
+</div>
+
+<h2>
+Convenient times for everyone.
+</h2>
+
+</div>
+
+
+<div class="arrival-grid">
+
+<div class="arrival-card">
+
+<h3>Drop off</h3>
+
+<div class="time">
+10:00am
+</div>
+
+<div class="time">
+4:30pm
+</div>
+
+</div>
+
+
+<div class="arrival-card">
+
+<h3>Collection</h3>
+
+<div class="time">
+9:30am
+</div>
+
+<div class="time">
+4:00pm
+</div>
+
+</div>
+
+</div>
+
+
+<div class="arrangement">
+
+<strong>Need another time?</strong><br>
+
+Anything outside of the above times can be arranged
+by prior agreement. Please contact Cozy Catz in advance
+to discuss this.
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- DOCUMENTS -->
+
+<section class="documents" id="documents">
+
+<div class="container">
+
+<div class="section-heading">
+
+<div class="eyebrow">
+Before your cat arrives
+</div>
+
+<h2>
+Forms & important information.
+</h2>
+
+<p>
+Please complete the boarding form and bring a printed
+hard copy with you when you bring your cat to Cozy Catz.
+</p>
+
+</div>
+
+
+<div class="document-grid">
+
+<!-- CHANGE THESE FILENAMES TO YOUR ACTUAL PDF FILES -->
+
+<div class="document">
+
+<div>
+<h3>Boarding Form</h3>
+
+<p>
+Please print, complete and bring with you.
+</p>
+</div>
+
+<a
+href="boarding-form.pdf"
+class="document-button"
+target="_blank"
+>
+View / Print
+</a>
+
+</div>
+
+
+<div class="document">
+
+<div>
+<h3>Terms & Conditions</h3>
+
+<p>
+Please read before your cat's stay.
+</p>
+</div>
+
+<a
+href="terms-and-conditions.pdf"
+class="document-button"
+target="_blank"
+>
+View T&Cs
+</a>
+
+</div>
+
+</div>
+
+
+<div class="important-note">
+
+<strong>Important:</strong>
+A hard copy of the boarding form is required.
+Please bring the completed form with you when your cat arrives.
+This is particularly important should veterinary treatment
+be required during your cat's stay, as an emailed copy may
+not be sufficient.
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- DIRECTIONS -->
+
+<section class="directions" id="directions">
+
+<div class="container">
+
+<div class="directions-box">
+
+<div class="eyebrow">
+Finding us
+</div>
+
+<h2>
+Directions to Cozy Catz Cattery.
+</h2>
+
+<p>
+
+Come along St. Aubin harbour front, passing the old
+courthouse. Head up the hill, passing the Somerville Hotel,
+and continue all the way up the steep hill until you reach
+the yellow line.
+
+<br><br>
+
+Look across the road for the post box in the wall,
+followed by two granite pillars. The outer pillar has
+the wooden Cozy Catz sign.
+
+<br><br>
+
+Turn between the two pillars and continue to the bottom.
+Look out for the big walk with painted cats on it.
+The cattery is just beyond this on the left.
+
+</p>
+
+
+<div class="direction-highlight">
+
+🐾 Look for the wooden Cozy Catz sign between the
+two granite pillars.
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+<div class="contact-inner">
+
+<div class="eyebrow">
+Get in touch
+</div>
+
+<h2>
+Have a question about your cat's stay?
+</h2>
+
+<p class="contact-intro">
+Please contact Cozy Catz directly using the details below.
+Texts are preferred where possible for enquiries.
+</p>
+
+
+<div class="contact-details">
+
+<!-- ADD EMAIL ADDRESS HERE -->
+
+<a
+href="mailto:YOUR-EMAIL@example.com"
+class="contact-link"
+>
+✉ Email Cozy Catz
+</a>
+
+
+<a
+href="tel:07700361635"
+class="contact-link"
+>
+☎ 07700 361635
+</a>
+
+</div>
+
+
+<div class="contact-rule">
+
+<strong>Please contact us through one channel only.</strong>
+
+<br><br>
+
+For enquiries, please email or text
+<strong>07700 361635</strong> where possible.
+
+<br><br>
+
+To help us keep track of enquiries and avoid messages
+being missed or duplicated, please don't contact Cozy Catz
+through WhatsApp, Facebook Messenger or multiple social
+media accounts.
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+© Cozy Catz Cattery · Jersey
+
+</footer>
+
+
+</body>
+</html>
